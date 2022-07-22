@@ -9,8 +9,8 @@ public class PrintTreeTest extends student.TestCase{
     }
     
     public void testPrint() {
-        // printTree.print("ViennaOpen", 2);
-        printTree.print1("ViennaOpen", 2, linkedList);
+        
+        printTree.print1("ViennaOpen", 2, "");
     }
 
 }
