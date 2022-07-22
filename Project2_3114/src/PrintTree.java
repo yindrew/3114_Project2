@@ -24,7 +24,30 @@ public class PrintTree {
            
     }
     
-    
+    public Node print1(String startingState, int depth, LinkedList path) {
+        if (depth == 0) {
+            return null;
+        }
+        
+        String[] nextMoves = ChessFaker.getNextMoves(startingState);
+        
+        for (int i = 0; i < nextMoves.length; i++) {
+            
+            String newBoard = ChessFaker.getNextBoard(startingState,
+                nextMoves[i]);
+            
+            path.insert(nextMoves[i]);
+            System.out.print(" " + path.getHead().val() + " ");
+            
+            System.out.println(newBoard + " fitness: " + ChessFaker.getFitness(
+                newBoard));            
+            
+            this.print1(newBoard, depth - 1, path);   
+        }
+        System.out.println();
+        return null;
+           
+    }
 
 
 
