@@ -1,16 +1,26 @@
+/**
+ * Test calss for PrintTree
+ * 
+ * @author yindrew
+ * @version 2021.07.25
+ */
+public class PrintTreeTest extends student.TestCase {
+    private PrintTree printTree;
 
-public class PrintTreeTest extends student.TestCase{
-    PrintTree printTree;
-    LinkedList linkedList;
-    
+    /**
+     * setting up the tests
+     */
     public void setUp() {
-        printTree = new PrintTree();
-        linkedList = new LinkedList();
+        printTree = new PrintTree("ViennaOpen", "2");
     }
-    
+
+
+    /**
+     * testing the print method
+     */
     public void testPrint() {
-        
-        printTree.print1("ViennaOpen", 2, "");
+
+        printTree.print();
     }
 
 }

@@ -13,7 +13,7 @@ public class Chess {
 
         } else if (args.length == 2) {
             
-            new PrintTree(args[0], args[1]);
+            new PrintTree(args[0], args[1]).print();
 
         } else if (args.length == 3) {
 
