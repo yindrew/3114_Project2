@@ -1,6 +1,10 @@
 
 public class PrintTree {
     
+    public PrintTree(String startingState, String depth) {
+        print(startingState, Integer.parseInt(depth));
+    }
+    
     public void print(String startingState, int depth) {
         if (depth == 0) {
             return;
