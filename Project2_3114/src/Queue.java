@@ -5,10 +5,10 @@
  * @version 0.1
  */
 public class Queue {
-    //field
+    // field
     private Node first;
     private Node last;
-    
+
     /**
      * constructor
      */
@@ -16,51 +16,55 @@ public class Queue {
         first = null;
         last = null;
     }
-    
+
+
     /**
      * Enqueue
+     * 
      * @param element
-     *          insert element
+     *            insert element
      */
     public void enqueue(String element) {
-        //get last
+        // get last
         Node temp = last;
-        
-        //set last
+
+        // set last
         last = new Node(element);
         last.setNext(null);
-        
-        //check is empty and insert
+
+        // check is empty and insert
         if (first == null) {
             first = last;
-        } else {
+        }
+        else {
             temp.setNext(last);
         }
 
-    }  
-    
+    }
+
+
     /**
      * Dequeue
+     * 
      * @return String
-     *          return element
+     *         return element
      */
     public String dequeue() {
-        
-        //check is empty
+
+        // check is empty
         if (first == null) {
             return null;
         }
-        
+
         String temp = first.val();
-        
+
         first = first.next();
-        
-        //after dequeue check again
-        if (first == null)
-        {
+
+        // after dequeue check again
+        if (first == null) {
             last = null;
         }
-        
+
         return temp;
     }
 }

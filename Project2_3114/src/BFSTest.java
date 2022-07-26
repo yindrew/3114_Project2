@@ -5,17 +5,18 @@
  * @version 0.1
  */
 public class BFSTest extends student.TestCase {
-    //field
+    // field
     private BFS bfs;
-    
+
     /*
      * set up
      */
     public void setUp() {
         bfs = new BFS("f");
-        
+
     }
-    
+
+
     /**
      * test BFS
      */
@@ -24,5 +25,3 @@ public class BFSTest extends student.TestCase {
     }
 
 }
-
-

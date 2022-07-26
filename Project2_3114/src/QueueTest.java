@@ -5,17 +5,18 @@
  * @version 0.1
  */
 public class QueueTest extends student.TestCase {
-    //field
+    // field
     private Queue q;
-    
+
     /**
      * set up
      */
     public void setUp() {
         q = new Queue();
-        
+
     }
-    
+
+
     /**
      * test Queue
      */
@@ -23,7 +24,7 @@ public class QueueTest extends student.TestCase {
         q.enqueue("A");
         q.enqueue("B");
         q.enqueue("C");
-        
+
         assertEquals("A", q.dequeue());
         assertEquals("B", q.dequeue());
         assertEquals("C", q.dequeue());

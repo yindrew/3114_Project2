@@ -8,7 +8,6 @@ public class PrintTree {
     private String startingState;
     private int depth;
 
-
     /**
      * constructor for PrintTree
      * 
@@ -21,6 +20,7 @@ public class PrintTree {
         this.startingState = startingState;
         this.depth = Integer.parseInt(depth);
     }
+
 
     /**
      * prints out the tree

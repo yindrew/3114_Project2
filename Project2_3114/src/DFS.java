@@ -1,5 +1,6 @@
 /**
  * DFS
+ * 
  * @author yindrew
  * @version 2021.07.25
  */
@@ -84,8 +85,12 @@ public class DFS {
                 found = true;
 
             }
-
-            recursive(newBoard, depth - 1, end, parent + " + " + nextMoves[i]);
+            if(parent == "") {
+                recursive(newBoard, depth - 1, end, " " + nextMoves[i]);
+            }
+            else {
+                recursive(newBoard, depth - 1, end, parent + " + " + nextMoves[i]);
+            }
 
         }
 

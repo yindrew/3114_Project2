@@ -26,7 +26,7 @@ public class Chess {
 
     /**
      * main
-     * @param args
+     * @param args input
      */
     public static void main(String[] args) {
         
