@@ -17,11 +17,6 @@ public class PrintTree {
      * @param depth
      *            the path up to the current game state
      */
-    
-    
-
-   
-
     public PrintTree(String startingState, String depth) {
         this.startingState = startingState;
         this.depth = Integer.parseInt(depth);
