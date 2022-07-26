@@ -32,7 +32,6 @@ public class DFS {
 
     }
 
-
     private void recursive(String start, int depth, String end, String parent) {
         nodesTotal++;
 
@@ -41,6 +40,7 @@ public class DFS {
         }
 
 
+ 
         String[] nextMoves = ChessFaker.getNextMoves(startingState);
         
         for(int i = 0; i < nextMoves.length; i++) {
