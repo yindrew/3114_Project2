@@ -8,7 +8,7 @@ public class DFS {
     private double timeStart;
     private double timeEnd;
     private String fitness = "Unknown";
-    private int nodesTotal = 0;
+    private int nodesTotal;
     private boolean found = false;
 
     public DFS(String startingState, String depth, String targetState) {
@@ -40,9 +40,7 @@ public class DFS {
             return;
         }
 
-            
 
-        
         String[] nextMoves = ChessFaker.getNextMoves(startingState);
         
         for(int i = 0; i < nextMoves.length; i++) {
@@ -55,9 +53,9 @@ public class DFS {
                 timeEnd = System.currentTimeMillis();
                 nodesVisited = nodesTotal;
                 found = true;
-                System.out.println("FOUND    ";)
+                
             }
-            System.out.println(newBoard + " " + end + " " + parent + " " + nextMoves[i]);
+            // System.out.println(newBoard + " " + end + " " + parent + " " + nextMoves[i]);
                         
             recursive(newBoard, depth - 1, end, parent + " + " + nextMoves[i]);
 
