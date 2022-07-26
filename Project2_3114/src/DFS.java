@@ -32,17 +32,13 @@ public class DFS {
 
     }
 
-
     private void recursive(String start, int depth, String end, String parent) {
         nodesTotal++;
 
         if (depth == 0) {
             return;
         }
-
-            
-
-        
+ 
         String[] nextMoves = ChessFaker.getNextMoves(startingState);
         
         for(int i = 0; i < nextMoves.length; i++) {
@@ -55,7 +51,7 @@ public class DFS {
                 timeEnd = System.currentTimeMillis();
                 nodesVisited = nodesTotal;
                 found = true;
-                System.out.println("FOUND    ";)
+                System.out.println("FOUND    ");
             }
             System.out.println(newBoard + " " + end + " " + parent + " " + nextMoves[i]);
                         
