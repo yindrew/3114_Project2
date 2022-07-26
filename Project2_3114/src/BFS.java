@@ -41,6 +41,7 @@ public class BFS {
         
         String currBoard = "";
         String movesOutput = "";
+        boolean flag = true;
         
         //find 200 more fitness than the start Board
         while (fitness < 200) {
@@ -58,12 +59,24 @@ public class BFS {
                 board.enqueue(ChessFaker.getNextBoard(currBoard, moves[i]));
                 
                 //get fitness and add
-                fitness = fitness + ChessFaker.getFitness(currBoard);
+                fitness = ChessFaker.getFitness(currBoard);
                 
+                
+                if (flag) {
+                    move.enqueue(moves[i]);
+
+                }
+                else {
+                    move.enqueue(movesOutput + " + " + moves[i]);
+                }
                 //get move and add
-                move.enqueue(movesOutput + " + " + moves[i]);
+                
+                
+                
                 
             }
+            
+            flag = false;
             
             nodesVisited++;
         }

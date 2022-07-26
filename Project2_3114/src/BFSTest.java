@@ -12,7 +12,7 @@ public class BFSTest extends student.TestCase {
      * set up
      */
     public void setUp() {
-        bfs = new BFS("ViennaOpen");
+        bfs = new BFS("f");
         
     }
     
@@ -24,3 +24,5 @@ public class BFSTest extends student.TestCase {
     }
 
 }
+
+

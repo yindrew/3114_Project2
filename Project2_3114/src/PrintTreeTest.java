@@ -11,7 +11,8 @@ public class PrintTreeTest extends student.TestCase {
      * setting up the tests
      */
     public void setUp() {
-        printTree = new PrintTree("ViennaOpen", "2");
+        // printTree = new PrintTree("ViennaOpen", "2");
+        printTree = new PrintTree("f", "2");
     }
 
 

@@ -46,8 +46,6 @@ public class NodeTest extends student.TestCase {
         node.setNext(node1);
         assertEquals(node.next(), node1);
     }
-    
-    
 
 
     /**
