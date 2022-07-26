@@ -24,6 +24,10 @@
  */
 public class Chess {
 
+    /**
+     * main
+     * @param args
+     */
     public static void main(String[] args) {
         
         if (args.length == 0 || args.length > 3) {

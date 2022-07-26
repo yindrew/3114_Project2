@@ -1,5 +1,5 @@
 /**
- * 
+ * Node
  * @author yindrew
  * @version 2021.07.22
  */
@@ -20,6 +20,7 @@ public class Node {
 
 
     /**
+     * next
      * @return next node
      */
     public Node next() {
@@ -30,6 +31,7 @@ public class Node {
 
 
     /**
+     * val
      * @return val
      */
     public String val() {
