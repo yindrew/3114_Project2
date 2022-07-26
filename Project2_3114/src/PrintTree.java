@@ -8,7 +8,7 @@ public class PrintTree {
     private String startingState;
     private int depth;
 
-<<<<<<< HEAD
+
     /**
      * constructor for PrintTree
      * 
@@ -17,21 +17,11 @@ public class PrintTree {
      * @param depth
      *            the path up to the current game state
      */
-=======
-    
-    
-
-    
-
-    public void print1(String startingState, int depth, String parent) {
-
->>>>>>> 2464f61a621b69c66f7c28828d395027359c5875
     public PrintTree(String startingState, String depth) {
         this.startingState = startingState;
         this.depth = Integer.parseInt(depth);
     }
-    
-<<<<<<< HEAD
+
     /**
      * prints out the tree
      */
@@ -53,10 +43,6 @@ public class PrintTree {
      *            the path up the the current game state
      */
     private void recursive(String startingState, int depth, String parent) {
-=======
-    public void print(String startingState, int depth) {
-
->>>>>>> 2464f61a621b69c66f7c28828d395027359c5875
         if (depth == 0) {
             return;
         }
