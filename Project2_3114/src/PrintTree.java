@@ -42,15 +42,15 @@ public class PrintTree {
      * @param parent
      *            the path up the the current game state
      */
-    private void recursive(String startingState, int depth, String parent) {
-        if (depth == 0) {
+    private void recursive(String start, int d, String parent) {
+        if (d == 0) {
             return;
         }
-        String[] nextMoves = ChessFaker.getNextMoves(startingState);
+        String[] nextMoves = ChessFaker.getNextMoves(start);
 
         for (int i = 0; i < nextMoves.length; i++) {
 
-            String newBoard = ChessFaker.getNextBoard(startingState,
+            String newBoard = ChessFaker.getNextBoard(start,
                 nextMoves[i]);
 
             System.out.print(parent + " + " + nextMoves[i] + " = ");
@@ -58,7 +58,7 @@ public class PrintTree {
             System.out.println(newBoard + " fitness: " + ChessFaker.getFitness(
                 newBoard));
 
-            recursive(newBoard, depth - 1, parent + " + " + nextMoves[i]);
+            recursive(newBoard, d - 1, parent + " + " + nextMoves[i]);
         }
     }
 

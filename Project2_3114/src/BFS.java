@@ -48,7 +48,7 @@ public class BFS {
         boolean flag = true;
 
         // find 200 more fitness than the start Board
-        while (fitness < 200) {
+        while (fitness <= 200) {
 
             // get current data
             currBoard = board.dequeue();
@@ -80,12 +80,12 @@ public class BFS {
         }
 
         long timeUsed = System.currentTimeMillis() - timeStart;
-
         // output the rest lines
         System.out.println("Moves to target: " + movesOutput);
         System.out.println("Win state: " + currBoard);
         System.out.println("Target fitness: " + fitness);
         System.out.println("Nodes Visited: " + nodesVisited);
         System.out.println("Duration: " + timeUsed);
+
     }
 }
