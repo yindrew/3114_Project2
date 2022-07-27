@@ -48,26 +48,23 @@ public class BFS {
         boolean flag = true;
 
         // find 200 more fitness than the start Board
-        while (fitness <= 200) {
+        while (fitness < 200) {
             
 
             // get current data
             currBoard = board.dequeue();
             movesOutput = move.dequeue();
             
-
+            // get fitness
+            fitness = ChessFaker.getFitness(currBoard);
 
             // get next moves
             String[] moves = ChessFaker.getNextMoves(currBoard);
 
             for (int i = 0; i < moves.length; i++) {
 
-
                 // get next board and store
                 board.enqueue(ChessFaker.getNextBoard(currBoard, moves[i]));
-
-                // get fitness and add
-                fitness = ChessFaker.getFitness(currBoard);
 
                 // get move and add
                 if (flag) {
