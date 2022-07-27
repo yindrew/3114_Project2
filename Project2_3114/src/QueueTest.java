@@ -29,6 +29,8 @@ public class QueueTest extends student.TestCase {
         assertEquals("B", q.dequeue());
         assertEquals("C", q.dequeue());
         assertNull(q.dequeue());
+        assertNull(q.getFirst());
+        assertNull(q.getLast());
 
     }
 

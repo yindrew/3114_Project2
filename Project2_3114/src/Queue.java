@@ -17,6 +17,22 @@ public class Queue {
         last = null;
     }
 
+    /**
+     * getter for the first node
+     * @return firstNode
+     */
+    public Node getFirst() {
+        return first;
+    }
+    
+    /**
+     * getter for the last node
+     * @return last
+     */
+    public Node getLast() {
+        return last;
+    }
+
 
     /**
      * Enqueue

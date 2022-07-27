@@ -32,12 +32,7 @@ public class Chess {
      */
     public static void main(String[] args) {
 
-        if (args.length == 0 || args.length > 3) {
-
-            throw new IllegalArgumentException();
-
-        }
-        else if (args.length == 1) {
+        if (args.length == 1) {
 
             new BFS(args[0]).print();
 
@@ -47,7 +42,7 @@ public class Chess {
             new PrintTree(args[0], args[1]).print();
 
         }
-        else if (args.length == 3) {
+        else {
 
             new DFS(args[0], args[1], args[2]).print();
         }

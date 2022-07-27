@@ -105,7 +105,7 @@ public class DFS {
 
             String newBoard = ChessFaker.getNextBoard(start, nextMoves[i]);
 
-            if (newBoard.equals(end) && found == false) {
+            if (newBoard.equals(end)) {
                 moves = parent + " + " + nextMoves[i];
                 fitness = Integer.toString(ChessFaker.getFitness(targetState));
                 timeEnd = System.currentTimeMillis();

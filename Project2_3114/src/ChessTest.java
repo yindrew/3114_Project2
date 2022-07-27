@@ -28,6 +28,7 @@ public class ChessTest extends student.TestCase {
         Chess.main(new String[] { "ViennaOpen", "2", "ViPnZaOpen" });
 
         assertTrue(systemOut().getHistory().contains("Pg8 + Qe2"));
+        assertFalse(systemOut().getHistory().contains("ViPnnaOpWn"));
 
     }
 
@@ -37,11 +38,16 @@ public class ChessTest extends student.TestCase {
      * 
      */
     public void testMainBFS() {
+
         Chess.main(new String[] { "f" });
 
         assertTrue(systemOut().getHistory().contains("Na7 + Pf1"));
         assertTrue(systemOut().getHistory().contains("Target fitness: 210"));
 
     }
+    
+    
+    
+    
 
 }
