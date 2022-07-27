@@ -9,7 +9,7 @@ public class BFSTest extends student.TestCase {
     private BFS bfs;
 
     /*
-     * set up
+     * setting up tests
      */
     public void setUp() {
         bfs = new BFS("f");
@@ -22,6 +22,11 @@ public class BFSTest extends student.TestCase {
      */
     public void testPrint() {
         bfs.print();
+        
+        assertTrue(systemOut().getHistory().contains("Na7 + Pf1"));
+        assertTrue(systemOut().getHistory().contains("Target fitness: 210"));
+
+
     }
 
 }

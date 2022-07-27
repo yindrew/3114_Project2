@@ -8,12 +8,12 @@ public class DFS {
     private String startingState;
     private int depth;
     private String targetState;
-    private String moves = "Cannot move to target";
-    private int nodesVisited = 0;
+    private String moves = " Cannot move to target";
+    private int nodesVisited;
     private long timeStart;
     private long timeEnd;
     private String fitness = "Unknown";
-    private int nodesTotal;
+    private int nodesTotal = 1;
     private boolean found = false;
 
     /**
@@ -45,18 +45,41 @@ public class DFS {
             + targetState);
         System.out.println("Moves to target:" + moves);
         System.out.println("Target fitness: " + fitness);
-        System.out.println("Nodes Visited: " + nodesVisited);
+        
+        if (depth == 1 && !found) {
+            nodesTotal -= 1;
+        }
+        
+        if (found) {
+            System.out.println("Nodes Visited: " + nodesVisited);
+        }
+        else {
+            System.out.println("Nodes Visited: " + nodesTotal);
+
+        }
+
         long dif = timeEnd - timeStart;
         System.out.println("Duration: " + dif);
 
     }
-    
+
+
     /**
      * get Nodes total
+     * 
      * @return total nodes
      */
     public int getNodesTotal() {
         return nodesTotal;
+    }
+    
+    /**
+     * get total visited nodes
+     * 
+     * @return total nodes
+     */
+    public int getNodesVisited() {
+        return nodesVisited;
     }
 
 
@@ -87,14 +110,13 @@ public class DFS {
 
             if (newBoard.equals(end) && found == false) {
                 moves = parent + " + " + nextMoves[i];
-                fitness = Integer.toString(ChessFaker.getFitness(
-                    targetState));
+                fitness = Integer.toString(ChessFaker.getFitness(targetState));
                 timeEnd = System.currentTimeMillis();
                 nodesVisited = nodesTotal;
                 found = true;
 
             }
-            if(parent.equals("")) {
+            if (parent.equals("")) {
                 recursive(newBoard, d - 1, end, " " + nextMoves[i]);
             }
             else {

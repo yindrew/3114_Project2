@@ -10,9 +10,19 @@ import java.util.Random;
  * @version 0.2.0
  */
 public class ChessFaker {
-
+    /**
+     * all the pieces available
+     */
     static final char[] PIECES = "KQRRBBNNPPPP".toCharArray();
+    
+    /**
+     * the ranks on the files
+     */
     static final char[] RANKS = "12345678".toCharArray();
+    
+    /**
+     * the files on the board
+     */
     static final char[] FILES = "abcdefgh".toCharArray();
     private static final Charset CSET = StandardCharsets.UTF_8;
     private static final int MIN_ASCII = (int)'A';
