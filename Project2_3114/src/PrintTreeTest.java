@@ -1,5 +1,5 @@
 /**
- * Test calss for PrintTree
+ * Test class for PrintTree
  * 
  * @author yindrew
  * @version 2021.07.25
@@ -45,7 +45,8 @@ public class PrintTreeTest extends student.TestCase {
             "Pe8 + Bf4 + Ba4 + Pg1 + Bh6"));
 
     }
-    
+
+
     /**
      * testing the print method
      */
@@ -54,7 +55,6 @@ public class PrintTreeTest extends student.TestCase {
         printTree2.print();
 
         assertTrue(systemOut().getHistory().contains("+ Bg6 "));
-
 
     }
 

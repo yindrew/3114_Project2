@@ -13,7 +13,7 @@ public class DFS {
     private long timeStart;
     private long timeEnd;
     private String fitness = "Unknown";
-    private int nodesTotal = 1;
+    private int nodesTotal = 0;
     private boolean found = false;
 
     /**
@@ -46,12 +46,9 @@ public class DFS {
         System.out.println("Moves to target:" + moves);
         System.out.println("Target fitness: " + fitness);
         
-        if (depth == 1 && !found) {
-            nodesTotal -= 1;
-        }
         
         if (found) {
-            System.out.println("Nodes Visited: " + nodesVisited);
+            System.out.println("Nodes Visited: " + (nodesVisited + 1));
         }
         else {
             System.out.println("Nodes Visited: " + nodesTotal);

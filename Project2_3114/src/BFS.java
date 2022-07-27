@@ -49,15 +49,19 @@ public class BFS {
 
         // find 200 more fitness than the start Board
         while (fitness <= 200) {
+            
 
             // get current data
             currBoard = board.dequeue();
             movesOutput = move.dequeue();
+            
+
 
             // get next moves
             String[] moves = ChessFaker.getNextMoves(currBoard);
 
             for (int i = 0; i < moves.length; i++) {
+
 
                 // get next board and store
                 board.enqueue(ChessFaker.getNextBoard(currBoard, moves[i]));
