@@ -8,7 +8,7 @@ public class BFS {
 
     // field
     private String start;
-
+    private int target;
     /**
      * constructor
      * 
@@ -17,6 +17,8 @@ public class BFS {
      */
     public BFS(String start) {
         this.start = start;
+        this.target = 200 + ChessFaker.getFitness(start);
+        
     }
 
 
@@ -44,11 +46,8 @@ public class BFS {
         String currBoard = "";
         String movesOutput = "";
 
-        // no + at first
-        boolean flag = true;
-
         // find 200 more fitness than the start Board
-        while (fitness < 200) {
+        while (fitness < target) {
             
 
             // get current data
@@ -67,22 +66,18 @@ public class BFS {
                 board.enqueue(ChessFaker.getNextBoard(currBoard, moves[i]));
 
                 // get move and add
-                if (flag) {
-                    move.enqueue(moves[i]);
-                }
-                else {
-                    move.enqueue(movesOutput + " + " + moves[i]);
-                }
+
+                move.enqueue(movesOutput + " + " + moves[i]);
+                
 
             }
 
-            flag = false;
             nodesVisited++;
         }
 
         long timeUsed = System.currentTimeMillis() - timeStart;
         // output the rest lines
-        System.out.println("Moves to target: " + movesOutput);
+        System.out.println("Moves to target: " + movesOutput.substring(3));
         System.out.println("Win state: " + currBoard);
         System.out.println("Target fitness: " + fitness);
         System.out.println("Nodes Visited: " + nodesVisited);

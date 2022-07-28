@@ -8,11 +8,11 @@ public class BFSTest extends student.TestCase {
     // field
     private BFS bfs;
 
-    /*
+    /**
      * setting up tests
      */
     public void setUp() {
-        bfs = new BFS("f");
+        bfs = new BFS("quickWin");
 
     }
 
@@ -23,9 +23,8 @@ public class BFSTest extends student.TestCase {
     public void testPrint() {
         bfs.print();
         
-        assertTrue(systemOut().getHistory().contains("Na7 + Pf1"));
-        assertTrue(systemOut().getHistory().contains("Target fitness: 210"));
-
+        assertTrue(systemOut().getHistory().contains("Pe8 + Bf4 + Ba4"));
+        assertTrue(systemOut().getHistory().contains("Target fitness: 138"));
 
     }
 
